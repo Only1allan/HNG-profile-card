@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(195, 223, 214);
+}
+p {
+    text-align: center;
+}
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+    width: 100%;
+    background: white; 
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0,0, 0.1);
+}
+.image-container{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid rgb(82, 181, 209);
+    padding: 1px;
+    margin-bottom: 10px;
+}
+
+.image-container .profile-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    
+}
+
+.profile-card .text-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-data .name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.text-data .job {
+    font-weight: 600;
+}
+
+.social-links{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 15px;
+}
+.social-links .link{
+    background-color: rgb(82, 181, 209);
+    color: white;
+    margin: 0 8px;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+}
+.email {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.email i {
+    color: rgb(82, 181, 209);
+    font-size: 20px;
+}
+
+.email p {
+    margin: 0;
+}
+.current-time {
+    margin-top: 15px;
+    color: rgb(82, 181, 209);
+    font-weight: 600;
+}

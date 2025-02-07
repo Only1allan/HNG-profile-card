@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="image-container">
+            <img src="dp.png" alt="Allan Kariuki" class="profile-img" data-testid="profilePicture" width="150" height="150">
+        </div>
+
+        <div class="text-data">
+            <span class="name" data-testid="fullName">Allan Kariuki</span>
+            <span class="job" data-testid="jobTitle">Full Stack Developer & Virtual assistant</span>
+        </div>
+
+        <div class="bio-data">
+            <p class="bio" data-testid="shortBio">Full Stack developer with over 3 years of experience building scalable applications for clients.</p>
+        </div>
+
+        <div class="email" data-testid="emailAddress">
+            <a href="mailto:kariukiallan850@gmail.com">
+                <i class="bx bxl-gmail"></i>
+
+            </a>
+            <p>kariukiallan850@gmail.com</p>
+        </div>
+
+        <div class="location" data-testid="currentLocation">
+            <p>Currently living in Nairobi Kenya</p>
+        </div>
+
+        <div class="social-links" data-testid="socialLinks">
+            <a href="https://www.linkedin.com/in/allan-kariuki/" class="link">
+                <i class="bx bxl-linkedin"></i>
+            </a> 
+            <a href="https://github.com/Only1allan/" class="link">
+                <i class="bx bxl-github"></i>
+            </a>
+        </div>
+
+        <div class="current-time" data-testid="currentTimeUTC">
+            <p>Current UTC time: </p>
+        </div>
+    </div>
+
+    <script>
+        function updateKenyanTime() {
+            const options = {
+                timeZone: 'Africa/Nairobi',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+
+            const kenyanTime = new Date().toLocaleTimeString('en-US', options);
+            document.querySelector('.current-time p').innerHTML = 'Current Local Time: ' + kenyanTime;
+        }
+
+        // Update time immediately
+        updateKenyanTime();
+
+        // Update time every second
+        setInterval(updateKenyanTime, 1000);
+    </script>
+</body>
+</html>
